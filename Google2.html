@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Google</title>
-    <link rel="stylesheet" href="Google2.css">
+    <link rel="stylesheet" href="Google2.css?after">
   </head>
   <body>
     <div class="header">
-      <a href="https://mail.google.com/mail/u/0/">Gmail</a>
-      <a href="#">이미지</a>
+      <a id="header-1">Gmail</a>
+      <a id="header-2">이미지</a>
       <a href="#"><img src="setting.png"></a>
-      <button id="active">로그인</button>
+      <button id="header-4">로그인</button>
     </div>
 
     <div class="main">
@@ -18,19 +18,20 @@
            <img src="logo.png" >
         </div>
         <div class="search-bar">
-          <input id="inputId" type="text" name="textname" placeholder="Google 검색 또는 URL 입력">
-              <div class="icon-1">
-              <a href="#"><img src="sbimg2.png" width="50%"></a>
-              </div>
-              <div class="icon-2">
-              <a href="#"><img src="sbimg3.png" width="50%"></a>
-              </div>
+            <form id="search" action="https://www.google.com/search" method="get">
+              <input type="text" name="q" placeholder="Google 검색 또는 URL 입력">
+            </form>
+            <div class="icon-1">
+            <a href="#"><img src="sbimg2.png" width="50%"></a>
+            </div>
+            <div class="icon-2">
+            <a href="#"><img src="sbimg3.png" width="50%"></a>
+            </div>
         </div>
         <div class="btn">
-          <button class="low-btn">Google 검색</button>
-          <button class="low-btn">I'm Feeling Lucky</button>
+            <button class="low-btn" onclick="document.getElementById('search').submit();">Google 검색</button>
+            <button id="search" class="low-btn" onclick="document.location.href='https://www.google.com/doodles/'">I'm Feeling Lucky</button>
         </div>
-
     </div>
     <div class="footer">
         <div class="country">
@@ -38,16 +39,36 @@
         </div>
         <div class="footer-links">
           <span class="links-left">
-            <a href="#">광고</a>
-            <a href="#">비지니스</a>
-            <a href="#">Google 정보</a>
-            <a href="#">검색의 원리</a>
+            <a id="low-1">광고</a>
+            <a id="low-2">비지니스</a>
+            <a id="low-3">Google 정보</a>
+            <a id="low-4">검색의 원리</a>
           </span>
-          <span class=links-right">
-            <a href="#" style="margin-left:930px">개인정보처리방침</a>
-            <a href="#" style="margin-left:23px">약관</a>
+          <span class="links-right">
+            <a id="low-5" style="margin-left:930px">개인정보처리방침</a>
+            <a id="low-6" style="margin-left:23px">약관</a>
             <a href="#" style="margin-left:23px">설정</a>
           </span>
+
+          <script>
+
+            var a=document.getElementById('header-1').href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox";
+
+            var a=document.getElementById('header-2').href="https://www.google.co.kr/imghp?hl=ko&tab=ri&ogbl";
+
+            var a=document.getElementById('low-1').href="https://ads.google.com/intl/ko_kr/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1";
+
+            var a=document.getElementById('low-2').href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none";
+
+            var a=document.getElementById('low-3').href="https://about.google/?utm_source=google-KR&utm_medium=referral&utm_campaign=hp-footer&fg=1";
+
+            var a=document.getElementById('low-4').href="https://www.google.com/search/howsearchworks/?fg=1";
+
+            var a=document.getElementById('low-5').href="https://policies.google.com/privacy?fg=1";
+
+            var a=document.getElementById('low-6').href="https://policies.google.com/terms?fg=1";
+
+          </script>
         </div>
   </body>
 </html>
